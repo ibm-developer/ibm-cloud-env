@@ -1,6 +1,6 @@
 # ibm-cloud-env
 
-[![Build Status](https://travis.ibm.com/antona/ibm-cloud-env.svg?token=czf6owygvfs3qbpvsT7c&branch=master)](https://travis.ibm.com/antona/ibm-cloud-env)
+[![Build Status](https://travis-ci.org/ibm-cloud-tools/ibm-cloud-env.svg?branch=master)](https://travis-ci.org/ibm-cloud-tools/ibm-cloud-env)
 
 The `ibm-cloud-env` module allows to abstract environment variables from various Cloud compute providers, such as, but not limited to, CloudFoundry and Kubernetes, so the application could be environment-agnostic.
 
