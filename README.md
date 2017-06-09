@@ -11,7 +11,7 @@ The module allows to define an array of search patterns that will be executed on
 ```bash
 npm install ibm-cloud-env
 ```
-
+ 
 ### Usage
 
 Create a JSON file containing your mappings and initialize the module
