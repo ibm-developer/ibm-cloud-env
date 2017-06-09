@@ -1,0 +1,22 @@
+{
+  "name": "ibm-cloud-env",
+  "version": "0.0.1",
+  "description": "Abstraction layer for CF and Kube env variables",
+  "main": "lib/lib.js",
+  "scripts": {
+    "test": "nyc mocha"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "app-root-path": "^2.0.1",
+    "jsonpath": "^0.2.11",
+    "log4js": "^1.1.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1",
+    "nyc": "^10.3.2"
+  }
+}
