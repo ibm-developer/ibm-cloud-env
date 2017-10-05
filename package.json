@@ -1,22 +1,27 @@
 {
-  "name": "ibm-cloud-env",
-  "version": "0.0.6",
-  "description": "Abstraction layer for CF and Kube env variables",
-  "main": "lib/lib.js",
-  "scripts": {
-    "test": "nyc mocha"
-  },
-  "author": "",
-  "license": "Apache-2.0",
-  "dependencies": {
-    "app-root-path": "^2.0.1",
-    "jsonpath": "^0.2.11",
-    "log4js": "^1.1.1",
-    "underscore": "^1.8.3"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.4.1",
-    "nyc": "^10.3.2"
-  }
+	"name": "ibm-cloud-env",
+	"version": "0.0.7",
+	"description": "Abstraction layer for CF and Kube env variables",
+	"main": "lib/lib.js",
+	"scripts": {
+		"lint": "eslint .",
+		"mocha": "nyc mocha --recursive",
+		"test": "npm run lint && npm run mocha",
+		"coveralls": "nyc report --reporter=text-lcov | coveralls"
+	},
+	"author": "",
+	"license": "Apache-2.0",
+	"dependencies": {
+		"app-root-path": "^2.0.1",
+		"jsonpath": "^0.2.11",
+		"log4js": "^1.1.1",
+		"underscore": "^1.8.3"
+	},
+	"devDependencies": {
+		"chai": "^3.5.0",
+		"coveralls": "^3.0.0",
+		"eslint": "^4.8.0",
+		"mocha": "^3.4.1",
+		"nyc": "^10.3.2"
+	}
 }
