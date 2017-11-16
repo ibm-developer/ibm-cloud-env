@@ -3,13 +3,13 @@ process.env.VCAP_SERVICES = JSON.stringify({
 		{
 			name: "service1-name1",
 			credentials: {
-				username: "service1-username1",
+				username: "service1-username1"
 			}
 		},
 		{
 			name: "service1-name2",
 			credentials: {
-				username: "service1-username2",
+				username: "service1-username2"
 			}
 		}
 	],
