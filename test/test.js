@@ -43,6 +43,11 @@ describe('App', function () {
 		expect(IBMCloudEnv.getDictionary("cf_var3")).to.be.an("object");
 		expect(IBMCloudEnv.getDictionary("cf_var3")).to.have.a.property("value");
 		expect(IBMCloudEnv.getDictionary("cf_var3").value).to.equal("test-application");
+		
+		expect(IBMCloudEnv.getString("cf_var4")).to.equal("service1-username1");
+		expect(IBMCloudEnv.getDictionary("cf_var4")).to.be.an("object");
+		expect(IBMCloudEnv.getDictionary("cf_var4")).to.have.a.property("value");
+		expect(IBMCloudEnv.getDictionary("cf_var4").value).to.equal("service1-username1");
 	});
 
 	it('Should be able to get simple string from environment var', function () {
