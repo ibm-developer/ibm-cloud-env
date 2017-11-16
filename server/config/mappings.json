@@ -24,6 +24,11 @@
 			"cloudfoundry:$.application_name"
 		]
 	},
+	"cf_var4":{
+		"searchPatterns": [
+			"cloudfoundry:$.[?(@.name == 'service1-name1')].credentials.username"
+		]
+	},
 	"env_var1":{
 		"searchPatterns": [
 			"env:ENV_VAR_STRING"
