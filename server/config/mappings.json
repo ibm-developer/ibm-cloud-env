@@ -26,7 +26,7 @@
 	},
 	"cf_var4":{
 		"searchPatterns": [
-			"cloudfoundry:$.[?(@.name == 'service1-name1')].credentials.username"
+			"cloudfoundry:$.*[?(@.name == 'service1-name1')].credentials.username"
 		]
 	},
 	"env_var1":{
