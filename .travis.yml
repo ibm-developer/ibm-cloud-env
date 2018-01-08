@@ -1,23 +1,14 @@
 language: node_js
-
 node_js:
 - '8'
-
-script: npm test && npm run coveralls && ./npm_patch.sh
-
+before_install:
+- npm i -g makeshift && makeshift -r https://registry.npmjs.org
+- npm i -g markdown-to-html
+- wget https://github.com/github/hub/releases/download/v2.2.9/hub-linux-386-2.2.9.tgz
+- tar -xvzf hub-linux-386-2.2.9.tgz
+- export PATH=${PATH}:$PWD/hub-linux-386-2.2.9/bin/
+script: npm test && npm run coveralls && ./npm_version_upgrade.sh
 branches:
   only:
-    - development
-    - master
-
-notifications:
-  slack:
-    rooms:
-      - $SLACK_ARF_DEVOPS
-
-deploy:
-  provider: npm
-  email: $NPM_EMAIL
-  api_key: $NPM_TOKEN
-  on:
-    branch: master
+  - development
+  - master
