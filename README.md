@@ -92,3 +92,14 @@ var service2username = IBMCloudEnv.getString("service2-username"); // this will 
 ```
 
 Following the above approach your application can be implemented in an runtime-environment agnostic way, abstracting differences in environment variable management introduced by different cloud compute providers.
+
+## Publishing Changes
+
+In order to publish changes, you will need to fork the repository or ask to join the `ibm-developer` org and branch off the `master` branch.
+
+Make sure to follow the [conventional commit specification](https://conventionalcommits.org/) before contributing. To help you with commit a commit template is provide. Run `config.sh` to initialize the commit template to your `.git/config` or use [commitizen](https://www.npmjs.com/package/commitizen)
+
+Once you are finished with your changes, run `npm test` to make sure all tests pass.
+
+Do a pull request against `master`, make sure the build passes. A team member will review and merge your pull request.
+Once merged to `master` an auto generated pull request will be created against master to update the changelog. Make sure that the CHANGELOG.md and the package.json is correct before merging the pull request. After the auto generated pull request has been merged to `master` the version will be bumped and published to npm.
