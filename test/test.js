@@ -1,12 +1,13 @@
 const expect = require('chai').expect;
 const Log4js = require('log4js');
+const IBMCloudEnv = require("../lib/lib.js");
+
+
 
 describe('App', function () {
-	let IBMCloudEnv;
 
 	before(function () {
 		require("./fake-env-vars");
-		IBMCloudEnv = require("../lib/lib.js");
 		IBMCloudEnv.setLogLevel(Log4js.levels.TRACE);
 		IBMCloudEnv.init("/invalid-file-name");
 		IBMCloudEnv.init();
@@ -71,4 +72,34 @@ describe('App', function () {
 		expect(IBMCloudEnv.getDictionary("env_var3")).to.have.a.property("value");
 		expect(IBMCloudEnv.getDictionary("env_var3").value).to.equal("env-var-json-username");
 	});
+});
+
+describe('Test credentials for Watson', function() {
+	const credentials = {
+		tag_label_creds: 'someOtherCreds',
+		watson_discovery_password: 'password',
+		watson_conversation_password: 'password',
+		watson_conversation_url: 'url',
+		watson_conversation_username: 'username',
+		watson_conversation_api_key: 'api_key',
+		watson_conversation_apikey: 'apikey',
+	};
+	const filtered_credentials = {
+		'api_key': 'api_key',
+		'iam_apikey': 'apikey',
+		'password': 'password',
+		'url': 'url',
+		'username': 'username',
+	};
+
+	it('should return {} for missing parameters', function() {
+		expect(IBMCloudEnv.getCredentialsForService('', '', null)).to.deep.equal({});
+		expect(IBMCloudEnv.getCredentialsForService('', '', {})).to.deep.equal({});
+		expect(IBMCloudEnv.getCredentialsForService('', '', undefined)).to.deep.equal({});
+	});
+
+	it('should return the credentials', function() {
+		expect(IBMCloudEnv.getCredentialsForService('watson', 'conversation', credentials)).to.deep.equal(filtered_credentials);
+	});
+
 });
