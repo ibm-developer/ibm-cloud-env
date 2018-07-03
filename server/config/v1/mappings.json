@@ -40,6 +40,16 @@
 			"env:ENV_VAR_JSON:$.credentials.username"
 		]
 	},
+	"user_provided_var1":{
+		"searchPatterns": [
+			"user-provided:servicename1:apikey"
+		]
+	},
+	"user_provided_nested":{
+		"searchPatterns": [
+			"user-provided:servicename2:writer.apikey"
+		]
+	},
 	"bad_var1":{
 		"searchPatterns": [
 			"env:asdasd:$asdasd",

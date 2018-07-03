@@ -15,10 +15,17 @@ process.env.VCAP_SERVICES = JSON.stringify({
 	],
 	"user-provided": [
 		{
-			name: "service2-name1",
-			credentials:{
-				username: "service2-username1"
-			}
+			"credentials":{
+				"apikey": "apikey1"
+			},
+			"name":"servicename1"
+			
+		},
+		{
+			"credentials":{
+				"apikey": "apikey2"
+			},
+			"name":"servicename2"
 		}
 	]
 });
