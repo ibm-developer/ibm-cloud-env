@@ -23,9 +23,23 @@ process.env.VCAP_SERVICES = JSON.stringify({
 		},
 		{
 			"credentials":{
-				"apikey": "apikey2"
+				"writer":{
+					"apikey": "apikey2"
+				}
 			},
 			"name":"servicename2"
+		},
+		{
+			"credentials":{
+				"apikey": "apikey3",
+				"nestedCreds": {
+					"nestedKey1": "nestedValue1",
+					"nestedKey2": {
+						"nestedKey3": "nestedValue3"
+					},
+				}
+			},
+			"name":"servicename3"
 		}
 	]
 });

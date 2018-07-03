@@ -38,9 +38,17 @@ describe('App', function () {
 			expect(IBMCloudEnv.getDictionary("user_provided_var1")).to.have.a.property("value");
 			expect(IBMCloudEnv.getDictionary("user_provided_var1").value).to.contain("apikey1");
 
-			expect(IBMCloudEnv.getString("user_provided_nested")).to.equal("apikey2");
-			expect(IBMCloudEnv.getDictionary("user_provided_nested")).to.have.a.property("value");
-			expect(IBMCloudEnv.getDictionary("user_provided_nested").value).to.contain("apikey2");
+			expect(IBMCloudEnv.getString("user_provided_var2")).to.equal("apikey2");
+			expect(IBMCloudEnv.getDictionary("user_provided_var2")).to.have.a.property("value");
+			expect(IBMCloudEnv.getDictionary("user_provided_var2").value).to.contain("apikey2");
+
+			expect(IBMCloudEnv.getString("user_provided_nested1")).to.equal("nestedValue1");
+			expect(IBMCloudEnv.getDictionary("user_provided_nested1")).to.have.a.property("value");
+			expect(IBMCloudEnv.getDictionary("user_provided_nested1").value).to.contain("nestedValue1");
+
+			expect(IBMCloudEnv.getString("user_provided_nested2")).to.equal("nestedValue3");
+			expect(IBMCloudEnv.getDictionary("user_provided_nested2")).to.have.a.property("value");
+			expect(IBMCloudEnv.getDictionary("user_provided_nested2").value).to.contain("nestedValue3");
 		});
 
 		it('Should be able to read VCAP_SERVICES and VCAP_APPLICATION with JSONPath', function () {

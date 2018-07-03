@@ -45,9 +45,19 @@
 			"user-provided:servicename1:apikey"
 		]
 	},
-	"user_provided_nested":{
+	"user_provided_var2":{
 		"searchPatterns": [
 			"user-provided:servicename2:writer.apikey"
+		]
+	},
+	"user_provided_nested1":{
+		"searchPatterns": [
+			"user-provided:servicename3:nestedKey1"
+		]
+	},
+	"user_provided_nested2":{
+		"searchPatterns": [
+			"user-provided:servicename3:nestedKey3"
 		]
 	},
 	"bad_var1":{
