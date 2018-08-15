@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.4"></a>
+## [0.2.4](https://github.com/ibm-developer/ibm-cloud-env/compare/v0.2.2...v0.2.4) (2018-08-15)
+
+
+### Bug Fixes
+
+* added user provided search patterns ([fa1af4a](https://github.com/ibm-developer/ibm-cloud-env/commit/fa1af4a))
+
+
+
 <a name="0.2.3"></a>
 ## [0.2.3](https://github.com/ibm-developer/ibm-cloud-env/compare/v0.2.2...v0.2.3) (2018-07-11)
 
