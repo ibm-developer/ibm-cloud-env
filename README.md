@@ -49,12 +49,14 @@ IBMCloudEnv.init("/path/to/the/mappings/file/relative/to/prject/root");
 In case mappings file path is not specified in the `IBMCloudEnv.init()` the module will try to load mappings from a default path of `/server/config/mappings.json`.
  
 #### Supported search patterns types
-ibm-cloud-config supports searching for values using three search pattern types - cloudfoundry, env, file. 
+ibm-cloud-config supports searching for values using three search pattern types - user-provided, cloudfoundry, env, file. 
+- Using `user-provided` allows to search for values in VCAP_SERVICES for service credentials
 - Using `cloudfoundry` allows to search for values in VCAP_SERVICES and VCAP_APPLICATIONS environment variables
 - Using `env` allows to search for values in environment variables
 - Using `file` allows to search for values in text/json files
 
 #### Example search patterns
+- user-provided:service-instance-name:credential-key - searches through parsed VCAP_SERVICES environment variable and returns the value of the requested service name and credential
 - cloudfoundry:service-instance-name - searches through parsed VCAP_SERVICES environment variable and returns the `credentials` object of the matching service instance name
 - cloudfoundry:$.JSONPath - searches through parsed VCAP_SERVICES and VCAP_APPLICATION environment variables and returns the value that corresponds to JSONPath
 - env:env-var-name - returns environment variable named "env-var-name"
@@ -67,6 +69,7 @@ ibm-cloud-config supports searching for values using three search pattern types 
 {
     "service1-credentials": {
         "searchPatterns": [
+            "user-provided:my-service1-instance-name:service1-credentials",
             "cloudfoundry:my-service1-instance-name", 
             "env:my-service1-credentials", 
             "file:/localdev/my-service1-credentials.json" 
@@ -74,6 +77,7 @@ ibm-cloud-config supports searching for values using three search pattern types 
     },
     "service2-username": {
         "searchPatterns":[
+            "user-provided:my-service2-instance-name:username",
             "cloudfoundry:$.service2[@.name=='my-service2-instance-name'].credentials.username",
             "env:my-service2-credentials:$.username",
             "file:/localdev/my-service1-credentials.json:$.username" 
