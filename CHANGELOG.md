@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.5"></a>
+## [0.2.5](https://github.com/ibm-developer/ibm-cloud-env/compare/v0.2.4...v0.2.5) (2018-09-04)
+
+
+### Bug Fixes
+
+* use widcard when parsing multiple unknown objects ([704d425](https://github.com/ibm-developer/ibm-cloud-env/commit/704d425))
+
+
+
 <a name="0.2.4"></a>
 ## [0.2.4](https://github.com/ibm-developer/ibm-cloud-env/compare/v0.2.2...v0.2.4) (2018-08-15)
 
