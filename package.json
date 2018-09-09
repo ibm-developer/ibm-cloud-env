@@ -18,16 +18,16 @@
   "license": "Apache-2.0",
   "dependencies": {
     "app-root-path": "^2.0.1",
-    "jsonpath": "^0.2.11",
-    "log4js": "^1.1.1",
+    "jsonpath": "^1.0.0",
+    "log4js": "^3.0.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^3.0.0",
     "eslint": "^4.8.0",
-    "mocha": "^3.4.1",
-    "nyc": "^10.3.2",
-    "standard-version": "^4.2.0"
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "standard-version": "^4.4.0"
   }
 }
