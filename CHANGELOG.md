@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.6"></a>
+## [0.2.6](https://github.com/ibm-developer/ibm-cloud-env/compare/v0.2.5...v0.2.6) (2018-09-11)
+
+
+### Bug Fixes
+
+* update jsonpath after regression ([9c7c1a6](https://github.com/ibm-developer/ibm-cloud-env/commit/9c7c1a6))
+* update version of log4js ([d8df08b](https://github.com/ibm-developer/ibm-cloud-env/commit/d8df08b))
+
+
+
 <a name="0.2.5"></a>
 ## [0.2.5](https://github.com/ibm-developer/ibm-cloud-env/compare/v0.2.4...v0.2.5) (2018-09-04)
 
