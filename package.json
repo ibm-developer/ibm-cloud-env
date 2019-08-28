@@ -13,7 +13,7 @@
 	"license": "Apache-2.0",
 	"dependencies": {
 		"app-root-path": "^2.0.1",
-		"jsonpath": "^1.0.0",
+		"jsonpath": "^1.0.2",
 		"log4js": "^3.0.6",
 		"underscore": "^1.8.3"
 	},
