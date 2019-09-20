@@ -1,20 +1,25 @@
 {
 	"name": "ibm-cloud-env",
-	"version": "0.0.7",
+	"version": "0.2.6",
 	"description": "Abstraction layer for CF and Kube env variables",
 	"main": "lib/lib.js",
 	"scripts": {
 		"lint": "eslint .",
 		"mocha": "nyc mocha --recursive",
 		"test": "npm run lint && npm run mocha",
-		"coveralls": "nyc report --reporter=text-lcov | coveralls"
+		"coveralls": "nyc report --reporter=text-lcov | coveralls",
+		"version": "standard-version"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ibm-developer/ibm-cloud-env.git"
 	},
 	"author": "",
 	"license": "Apache-2.0",
 	"dependencies": {
 		"app-root-path": "^2.0.1",
 		"jsonpath": "^1.0.2",
-		"log4js": "^3.0.6",
+		"log4js": "^3.0.5",
 		"underscore": "^1.8.3"
 	},
 	"devDependencies": {
@@ -22,6 +27,7 @@
 		"coveralls": "^3.0.0",
 		"eslint": "^4.8.0",
 		"mocha": "^5.2.0",
-		"nyc": "^13.1.0"
+		"nyc": "^13.1.0",
+		"standard-version": "^4.4.0"
 	}
 }
