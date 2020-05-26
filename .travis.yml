@@ -11,5 +11,5 @@ before_install:
 script: npm test && npm run coveralls && ./npm_version_upgrade.sh
 branches:
   only:
-  - development
+  - develop
   - master
