@@ -8,7 +8,7 @@ before_install:
 - mkdir -p /tmp/hub
 - tar -xvzf /tmp/hub-linux-386-2.2.9.tgz -C /tmp/hub --strip-components=1
 - export PATH=${PATH}:/tmp/hub/bin/
-script: npm test && npm run coveralls && ./npm_version_upgrade.sh
+script: npm test && ./npm_version_upgrade.sh
 branches:
   only:
   - develop
