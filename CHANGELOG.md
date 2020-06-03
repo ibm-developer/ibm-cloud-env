@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.7"></a>
+## [0.2.7](https://github.com/ibm-developer/ibm-cloud-env/compare/v0.2.6...v0.2.7) (2020-06-03)
+
+
+### Bug Fixes
+
+* update dependencies for sec vul ([cd0172a](https://github.com/ibm-developer/ibm-cloud-env/commit/cd0172a))
+
+
+
 <a name="0.2.6"></a>
 ## [0.2.6](https://github.com/ibm-developer/ibm-cloud-env/compare/v0.2.5...v0.2.6) (2018-09-11)
 
