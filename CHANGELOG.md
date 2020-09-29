@@ -1,6 +1,14 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.2.8](https://github.com/ibm-developer/ibm-cloud-env/compare/v0.2.6...v0.2.8) (2020-09-29)
+
+
+### Bug Fixes
+
+* number of search patterns and function name ([e9c43b9](https://github.com/ibm-developer/ibm-cloud-env/commit/e9c43b93a1176c37953cf31441788d7a8400e55b))
+* update dependencies for sec vul ([cd0172a](https://github.com/ibm-developer/ibm-cloud-env/commit/cd0172ae60ce354ced6d7900fab6444fd4939765))
 
 <a name="0.2.7"></a>
 ## [0.2.7](https://github.com/ibm-developer/ibm-cloud-env/compare/v0.2.6...v0.2.7) (2020-06-03)
