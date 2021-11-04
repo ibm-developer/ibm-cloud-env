@@ -19,7 +19,7 @@
   "dependencies": {
     "app-root-path": "^3.0.0",
     "jsonpath": "^1.0.2",
-    "log4js": "^3.0.5",
+    "log4js": "^6.3.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
