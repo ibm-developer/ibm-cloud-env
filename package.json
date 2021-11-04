@@ -23,7 +23,7 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.3.4",
     "coveralls": "^3.0.0",
     "eslint": "^8.1.0",
     "mocha": "^7.2.0",
