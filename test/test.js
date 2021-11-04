@@ -211,6 +211,20 @@ describe('App', function () {
 			expect(IBMCloudEnv.getDictionary("env_var3").value).to.equal("env-var-json-username");
 		});
 	})
+
+	describe('Reset', () => {
+		before(() => {
+			require("./fake-env-vars");
+			IBMCloudEnv.setLogLevel(Log4js.levels.TRACE);
+			IBMCloudEnv.init(path.join("/server", "config", "v1", "mappings.json"));
+		});
+
+		it('should reset loaded files and loaded mappings', () => {
+			expect(IBMCloudEnv.getString("file_var1")).to.equal("plain-text-string");
+			IBMCloudEnv.reset();
+			expect(IBMCloudEnv.getString("file_var1")).to.be.undefined;
+		});
+	});
 });
 
 describe('Test credentials for Watson', function() {
